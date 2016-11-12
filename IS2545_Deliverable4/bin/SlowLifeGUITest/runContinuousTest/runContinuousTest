@@ -1,0 +1,76 @@
+Manual Tests for runContinuous() Method in MainPanel.java
+
+CASE #1: Ensure that the iterations should be same when the player sets a certain initial state.
+
+    Preconditions:
+        Create a 10*10 world for both original version and modified version.
+        Set the same initial state between original world and modified world.
+    
+    Expected Result:
+        The iterations of the original world are the same as the modified world.
+
+    Execution Steps:
+        Typing "java GameOfLife 10" in terminal;
+        Click cell (1,1), (2,2), (3,3), (4,4), (5,5) to set them as current alive cells.
+        Click on "Run Continuous" button.
+        Look at the iterations on the screen and take a screenshot;
+        Click on "Stop" button;
+        Quit the game;
+        Typing "java GameOfLifeModified 10" in terminal;
+        Click cell (1,1), (2,2), (3,3), (4,4), (5,5) to set them as current alive cells.
+        Click on "Run Continuous" button.
+        Look at the iterations on the screen and take a screenshot;
+        Click on "Stop" button;
+        Quit the game;
+        Compare the two screenshots, they should be the same;
+
+CASE #2: Ensure that the iterations should be same when the player does not set anything at the initial state.
+
+    Preconditions
+        Create a 10*10 world for both original version and modified version.
+        Do not set any current alive cells at the initial state.
+        
+    Expected Result:
+        The iterations of the original world are the same as the modified world - cells should all be grey and unchanged.
+
+    Execution Steps:
+        Typing "java GameOfLife 10" in terminal;
+        Click on "Run Continuous" button;
+        Look at the iterations on the screen and take a screenshot;
+        Click on "Stop" button;
+        Quit the game;
+        Typing "java GameOfLifeModified 10" in terminal;
+        Click on ""Run Continuous" button;
+        Look at the iterations on the screen and take a screenshot;
+        Click on "Stop" button;
+        Quit the game;
+        Compare the two screenshots, they should be the same;
+
+
+CASE #3: Ensure that the "Run Continuous" function could continue to work after the player stops the iteration and then "Run Continuous" again.
+
+    Preconditions
+        Create a 10*10 world for both original version and modified version.
+        Set a random initial state.
+        
+    Expected Result:
+        For both orginal game and modified game, the iterations should countinue to work after the player stops the iteration and then "Run Continuous" again.
+
+    Execution Steps:
+        Typing "java GameOfLife 10" in terminal;
+        Click cell (2,1), (2,2), (2,3), (2,4), (2,5) to set them as current alive cells.
+        Click on "Run Continuous" button and wait for a few seconds;
+        Click on "Stop" button;
+        Click on "Run Continuous" button again;
+        Look at the iterations on the screen;
+        Quit the game;
+        Typing "java GameOfLifeModified 10" in terminal;
+        Click cell (2,1), (2,2), (2,3), (2,4), (2,5) to set them as current alive cells.
+        Click on "Run Continuous" button and wait for a few seconds;
+        Click on "Stop" button;
+        Click on "Run Continuous" button again;
+        Look at the iterations on the screen;
+        Quit the game;
+        Compare the performance for both original version and modified version. 
+        
+           
